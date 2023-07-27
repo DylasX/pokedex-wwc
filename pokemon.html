@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
-    <link rel="stylesheet" href="../../darkmode.css" />
+    <link rel="stylesheet" href="./assets/css/darkmode.css" />
     <style>
       @import url('https://fonts.cdnfonts.com/css/poppins');
       html {
@@ -83,18 +83,60 @@
           </svg>
         </button>
       </div>
+      <div
+        class="floating-button"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-12 h-12 text-zinc-800 dark:text-white fixed -right-1 bottom-1"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+          />
+        </svg>
+      </div>
+      <section class="pt-10">
+        <header>
+          <div class="title text-zinc-800 dark:text-white text-3xl font-bold">
+            <h2>What are</h2>
+            <h2>you looking for?</h2>
+          </div>
+        </header>
+        <div class="search-bar mt-4 relative">
+          <img
+            src="../../assets/images/search.svg"
+            class="absolute top-1 right-2 color-zinc-800 dark:color-white"
+            width="30"
+            height="30"
+            alt="search-icon"
+          />
+          <input
+            type="text"
+            id="first_name"
+            class="bg-white dark:bg-zinc-800 border border-sky-100 dark:border-zinc-500 text-white text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Search pokemon"
+            required
+          />
+        </div>
+      </section>
       <section class="mt-4">
         <div
-          id="pokemon-detail"
-          class="flex flex-col justify-between"
-        >
-        </div>
+          id="pokemon-list"
+          class="flex flex-row flex-wrap gap-y-3 justify-between"
+        ></div>
       </section>
     </main>
     <footer class="mb-2 md:relative w-3/4 mt-28">
       <h2 class="text-zinc-800 dark:text-gray-300">Made with ❤️ Dylas</h2>
     </footer>
-    <script src="../../darkmode.js"></script>
-    <script src="./javascript/detail.js"></script>
+    <script src="./assets/js/pokemon.js"></script>
+    <script src="./assets/js/darkmode.js"></script>
   </body>
 </html>
