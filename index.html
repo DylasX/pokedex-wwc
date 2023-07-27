@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./darkmode.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/poppins');
+      html {
+        font-family: 'poppins' !important;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+  </head>
+  <body class="bg-white transition-colors duration-1000 dark:bg-zinc-800 p-10">
+    <main>
+      <button
+        class="theme-toggle absolute right-10"
+        id="theme-toggle"
+        title="Toggles light & dark"
+        aria-label="auto"
+        aria-live="polite"
+      >
+        <svg
+          class="sun-and-moon"
+          aria-hidden="true"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <mask class="moon" id="moon-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <circle cx="24" cy="10" r="6" fill="black" />
+          </mask>
+          <circle
+            class="sun"
+            cx="12"
+            cy="12"
+            r="6"
+            mask="url(#moon-mask)"
+            fill="currentColor"
+          />
+          <g class="sun-beams" stroke="currentColor">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </button>
+      <section class="pt-20">
+        <header>
+          <div class="title text-zinc-800 dark:text-white text-3xl font-bold">
+            <h2>What are</h2>
+            <h2>you looking for?</h2>
+          </div>
+        </header>
+        <div class="search-bar mt-4 relative">
+          <img
+            src="./assets/images/search.svg"
+            class="absolute top-1 right-2 color-white"
+            width="30"
+            height="30"
+            alt="search-icon"
+          />
+          <input
+            type="text"
+            id="first_name"
+            class="bg-white dark:bg-zinc-800 border border-sky-100 dark:border-zinc-500 text-white text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Search pokemon"
+            required
+          />
+        </div>
+      </section>
+      <section class="mt-4 mb-4">
+        <div class="flex flex-row">
+          <button
+            class="main-button grow text-left h-28 bg-red-500 rounded-lg relative"
+            onclick="window.location.href = '/routes/pokemon/pokemon.html'"
+          >
+            <img
+              src="./assets/images/pokeball.svg"
+              class="absolute -top-1 -right-2 color-white grayscale opacity-10 rotate-12"
+              width="120"
+              height="120"
+              alt="search-icon"
+            />
+            <div class="w-full h-full">
+              <h2 class="text-white text-2xl font-bold pl-4 absolute bottom-1">
+                Pokemon
+              </h2>
+            </div>
+          </button>
+        </div>
+        <div class="secondary flex h-12 mt-3 gap-3 h-24">
+          <button
+            class="main-button grow text-left bg-yellow-500 rounded-lg relative"
+          >
+            <img
+              src="./assets/images/pokeball.svg"
+              class="absolute top-10 -right-1 color-white grayscale opacity-10 rotate-12 pointer-events-none"
+              width="60"
+              height="60"
+              alt="search-icon"
+            />
+            <div class="w-full h-full">
+              <h2 class="text-white text-2xl font-bold pl-4 absolute bottom-1">
+                Types
+              </h2>
+            </div>
+          </button>
+          <button
+            class="main-button grow text-left bg-green-500 rounded-lg relative"
+          >
+            <img
+              src="./assets/images/pokeball.svg"
+              class="absolute top-10 -right-1 color-white grayscale opacity-10 rotate-12 pointer-events-none"
+              width="60"
+              height="60"
+              alt="search-icon"
+            />
+            <div class="w-full h-full">
+              <h2 class="text-white text-2xl font-bold pl-4 absolute bottom-1">
+                Favs
+              </h2>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="absolute bottom-2 mb-2 md:relative w-3/4 mt-28">
+      <h2 class="text-zinc-800 dark:text-gray-300">Made with ❤️ Dylas</h2>
+    </footer>
+    <script src="./darkmode.js"></script>
+  </body>
+</html>
