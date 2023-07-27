@@ -17,7 +17,9 @@ const templateCard = async (name, imageSrc, index) => {
   const color = `rgb(${colorThief.getColor(image).join()})`;
 
   return `
-    <div class="w-[48%] flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = './detail.html?pokemon=${name}'">
+    <div class="w-[48%] flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = '${
+    window.location.hostname === 'dylasx.github.io' ? '/pokedex-wwc' : ''
+  }/detail.html?pokemon=${name}'">
         <img src="${imageSrc}" class="m-auto" width="80" height="70" alt="${name}"  />
         <h2 class="text-slate-100 font-bold capitalize">${name}</h2>
         <h3 class="text-slate-100 font-normal pb-2">ID: ${index}</h3>
@@ -49,10 +51,17 @@ const listFetcher = async () => {
 window.addEventListener('scroll', async () => {
   if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
     if (!isFetching) {
+      if (!document.querySelector('#status').classList.contains('left-3')) {
+        document.querySelector('#status').classList.add('left-3');
+        document.querySelector('#status').classList.add('bottom-1');
+        document.querySelector('#status').classList.toggle('top-1/2');
+      }
+      document.querySelector('#status').classList.toggle('hidden');
       isFetching = true;
       await listFetcher();
       interval.offset += 20;
       isFetching = false;
+      document.querySelector('#status').classList.toggle('hidden');
     }
   }
 });

@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Pokedex WWC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/pokeball.ico">
+    <meta name="description" content="Explore the Pokédex and discover information about all known Pokémon! Find data, types, abilities, and more.">
+    <meta name="keywords" content="Pokédex, Pokémon, encyclopedia, Pokémon types, abilities, statistics, creatures">
+    <meta name="author" content="Dylas">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#fff">
     <link rel="stylesheet" href="./assets/css/darkmode.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -87,7 +95,7 @@
         <div class="flex flex-row">
           <button
             class="main-button grow text-left h-28 bg-red-500 rounded-lg relative"
-            onclick="window.location.href = './pokemon.html'"
+            onclick="window.location.href = window.location.hostname === 'dylasx.github.io' ? '/pokedex-wwc' : '' + '/pokemon.html'"
           >
             <img
               src="./assets/images/pokeball.svg"
