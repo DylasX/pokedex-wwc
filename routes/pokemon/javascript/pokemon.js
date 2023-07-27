@@ -12,6 +12,7 @@ const templateCard = async (name, imageSrc, index) => {
       img.src = src;
     });
 
+  //TODO: remove img
   const image = await loadImage(imageSrc);
   const color = `rgb(${colorThief.getColor(image).join()})`;
 
