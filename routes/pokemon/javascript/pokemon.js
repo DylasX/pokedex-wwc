@@ -47,7 +47,7 @@ const listFetcher = async () => {
 };
 
 window.addEventListener('scroll', async () => {
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 500) {
+  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
     if (!isFetching) {
       isFetching = true;
       await listFetcher();
@@ -60,8 +60,11 @@ window.addEventListener('scroll', async () => {
 (async function () {
   try {
     //TODO: show loader
-    await listFetcher();
-    interval.offset += 20;
+    if (!isFetching) {
+      isFetching = true;
+      await listFetcher();
+      interval.offset += 20;
+    }
   } catch (error) {
     console.error(error);
   } finally {
