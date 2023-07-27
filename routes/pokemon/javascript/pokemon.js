@@ -16,7 +16,7 @@ const templateCard = async (name, imageSrc, index) => {
   const color = `rgb(${colorThief.getColor(image).join()})`;
 
   return `
-    <div class="w-[48%] flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = 'pokedex-wwc/routes/detail/detail.html?pokemon=${name}'">
+    <div class="w-[48%] flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = 'routes/detail/detail.html?pokemon=${name}'">
         <img src="${imageSrc}" class="m-auto" width="80" height="70" alt="${name}"  />
         <h2 class="text-slate-100 font-bold capitalize">${name}</h2>
         <h3 class="text-slate-100 font-normal pb-2">ID: ${index}</h3>
