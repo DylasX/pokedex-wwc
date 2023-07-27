@@ -10,9 +10,9 @@ const templateCard = async (name, imageSrc, index) => {
       img.onerror = reject;
       img.crossOrigin = 'Anonymous';
       img.src = src;
+      img.className = 'delete-img';
     });
 
-  //TODO: remove img
   const image = await loadImage(imageSrc);
   const color = `rgb(${colorThief.getColor(image).join()})`;
 
@@ -59,7 +59,7 @@ window.addEventListener('scroll', async () => {
 
 (async function () {
   try {
-    //TODO: show loader
+    document.querySelector('#status').classList.toggle('hidden');
     if (!isFetching) {
       isFetching = true;
       await listFetcher();
@@ -68,7 +68,9 @@ window.addEventListener('scroll', async () => {
   } catch (error) {
     console.error(error);
   } finally {
-    //TODO: hide loader
+    document.querySelector('#status').classList.toggle('hidden');
+    document.querySelector('#main-content').classList.toggle('blur-sm');
+    document.querySelector('#main-content').classList.toggle('opacity-30');
     isFetching = false;
   }
 })();

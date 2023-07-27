@@ -69,6 +69,7 @@ const templateCard = async (name, imageSrc, index, types, stats) => {
 };
 
 (function () {
+  document.querySelector('#status').classList.toggle('hidden');
   pokemon
     .getPokemonByName(pokemonToBeSearched)
     .then(async (response) =>
@@ -83,5 +84,10 @@ const templateCard = async (name, imageSrc, index, types, stats) => {
         )
       )
     )
-    .catch((err) => window.history.back());
+    .catch((err) => window.history.back())
+    .finally(() => {
+      document.querySelector('#status').classList.toggle('hidden');
+      document.querySelector('#main-content').classList.toggle('blur-sm');
+      document.querySelector('#main-content').classList.toggle('opacity-30');
+    });
 })();
