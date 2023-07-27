@@ -17,12 +17,12 @@ const templateCard = async (name, imageSrc, index) => {
   const color = `rgb(${colorThief.getColor(image).join()})`;
 
   return `
-    <div class="w-[48%] flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = '${
+    <div class="w-[48%] md:w-[23%] cursor-pointer flex flex-col text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-44" onclick="window.location.href = '${
     window.location.hostname === 'dylasx.github.io' ? '/pokedex-wwc' : ''
   }/detail.html?pokemon=${name}'">
         <img src="${imageSrc}" class="m-auto" width="80" height="70" alt="${name}"  />
-        <h2 class="text-slate-100 font-bold capitalize">${name}</h2>
-        <h3 class="text-slate-100 font-normal pb-2">ID: ${index}</h3>
+        <h2 class="text-slate-100 font-bold capitalize text-xs">${name}</h2>
+        <h3 class="text-slate-100 font-normal pb-2 text-xs">ID: ${index}</h3>
     </div>
     `;
 };
@@ -55,6 +55,7 @@ window.addEventListener('scroll', async () => {
         document.querySelector('#status').classList.add('left-3');
         document.querySelector('#status').classList.add('bottom-1');
         document.querySelector('#status').classList.toggle('top-1/2');
+        document.querySelector('#status').classList.toggle('md:left-1/2');
       }
       document.querySelector('#status').classList.toggle('hidden');
       isFetching = true;

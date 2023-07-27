@@ -31,7 +31,7 @@
   <body
     class="bg-white transition-colors duration-1000 dark:bg-zinc-800 p-10 pt-1"
   >
-    <div role="status" id="status" class="self-center m-auto hidden fixed top-1/2 left-44">
+    <div role="status" id="status" class="self-center m-auto hidden fixed top-1/2 left-44 md:left-1/2">
       <svg
         aria-hidden="true"
         class="w-12 h-12 text-gray-300 fill-sky-300 animate-spin dark:text-gray-600 dark:fill-white"
@@ -50,7 +50,7 @@
       </svg>
       <span class="sr-only">Loading...</span>
     </div>
-    <main id="main-content" class="opacity-30 blur-sm">
+    <main id="main-content" class="opacity-30 blur-sm md:w-1/2 md:m-auto">
       <div class="back-button pt-8 inline-flex text-zinc-800 dark:text-white">
         <div onclick="window.history.back()">
           <svg
@@ -155,7 +155,7 @@
       <section class="mt-4">
         <div
           id="pokemon-list"
-          class="flex flex-row flex-wrap gap-y-3 justify-between min-h-screen"
+          class="flex flex-row flex-wrap gap-y-3  justify-between min-h-screen"
         >
         </div>
       </section>
