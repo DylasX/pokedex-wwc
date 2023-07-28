@@ -48,7 +48,7 @@ const listFetcher = async () => {
 };
 
 window.addEventListener('scroll', async () => {
-  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 100) {
+  if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 300) {
     if (!isFetching) {
       if (!document.querySelector('#status').classList.contains('left-3')) {
         document.querySelector('#status').classList.add('left-3');
