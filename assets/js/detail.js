@@ -27,7 +27,7 @@ const templateCard = async (name, imageSrc, index, types, stats) => {
         <div class="text-center bg-[${color}] dark:bg-[${color}] rounded-lg justify-center shadow-xl dark:shadow-md h-60 relative">
             <h2 class="font-bold text-slate-100 text-3xl pt-4 capitalize">${name}</h2>
             <p class="font-bold text-slate-100 text-md">${index}</p>
-            <img src="${imageSrc}" class="m-auto absolute -bottom-7 left-1/4 md:left-[35%]" width="150" height="150" alt="${name}">
+            <img src="${imageSrc}" class="m-auto absolute -bottom-7 left-0 right-0" width="150" height="150" alt="${name}">
         </div>
       </div>
       <div class="description mt-5">
