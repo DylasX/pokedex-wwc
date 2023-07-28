@@ -39,7 +39,7 @@ const templateCard = async (name, imageSrc, index, types, stats) => {
               )
               .join('')}            
         </div>
-        <div class="stats mt-5">
+        <div class="stats mt-8">
             <ul>
                 ${stats
                   .map(
