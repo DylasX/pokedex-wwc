@@ -30,7 +30,7 @@ const templateCard = async (name, imageSrc, index, types, stats) => {
             <img src="${imageSrc}" class="m-auto absolute -bottom-7 left-0 right-0" width="150" height="150" alt="${name}">
         </div>
       </div>
-      <div class="description mt-5">
+      <div class="description mt-8">
         <div class="type-divs flex flex-row justify-center gap-5">
             ${types
               .map(
