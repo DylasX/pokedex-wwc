@@ -32,7 +32,6 @@ const interval = {
   limit: 20,
 };
 let isFetching = false;
-const pokemon = new Pokedex.Pokedex();
 
 const listFetcher = async () => {
   const data = await pokemon.getPokemonsList(interval);
