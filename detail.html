@@ -62,8 +62,8 @@
       <span class="sr-only">Loading...</span>
     </div>
     <main id="main-content" class="opacity-30 blur-sm md:w-1/2 md:m-auto">
-      <div class="back-button pt-8 inline-flex text-zinc-800 dark:text-white">
-        <div onclick="window.history.back()">
+      <div class="back-button pt-8 inline-flex justify-between w-full text-zinc-800 dark:text-white">
+        <div onclick="window.history.back()" class="inline-flex cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -78,11 +78,10 @@
               d="M15.75 19.5L8.25 12l7.5-7.5"
             />
           </svg>
+          <p class="ml-2">Back</p>
         </div>
-
-        <p class="ml-2">Back</p>
         <button
-          class="theme-toggle absolute right-10"
+          class="theme-toggle"
           id="theme-toggle"
           title="Toggles light & dark"
           aria-label="auto"
