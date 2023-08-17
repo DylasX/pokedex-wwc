@@ -2,6 +2,8 @@
 
 Welcome to the Pokedex Application project! This application was developed during my time as a tutor at women who code. The purpose of this project is to showcase a simple Pokedex application built using vanilla JavaScript. The application allows users to search for and view information about different Pokemon species.
 
+![Pokedex](pokedex.png)
+
 ## Table of Contents
 
 - [Pokedex Application](#pokedex-application)
